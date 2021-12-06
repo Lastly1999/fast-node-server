@@ -1,4 +1,4 @@
-import { IsNotEmpty } from "class-validator"
+import { IsNotEmpty, IsString, IsArray } from "class-validator"
 
 export class CreateUserDto {
     @IsNotEmpty({ message: "用户名不能为空" })
@@ -8,6 +8,10 @@ export class CreateUserDto {
     @IsNotEmpty({ message: "用户昵称不能为空" })
     readonly nikeName: string
     @IsNotEmpty({ message: "角色id不能为空" })
+    @IsString({ message: "角色id只能为string类型" })
     readonly roleId: string
+    @IsNotEmpty({ message: "角色id列表不能为空" })
+    @IsArray({ message: "角色id只能为Array类型" })
+    readonly roleIds: string[]
     readonly userAvatar: string
 }

@@ -23,7 +23,10 @@ export class AuthService {
             },
         })
         if (!result) {
-            throw new HttpException("暂未注册用户", HttpStatus.BAD_REQUEST)
+            throw new HttpException(
+                "暂未注册用户",
+                HttpStatus.INTERNAL_SERVER_ERROR,
+            )
         }
         return {
             info: result,

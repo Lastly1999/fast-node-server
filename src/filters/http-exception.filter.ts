@@ -15,13 +15,11 @@ export class HttpExceptionFilter<T> implements ExceptionFilter {
         const request = ctx.getRequest()
 
         const message = exception.message
-        Logger.log("错误提示", message)
+        Logger.log(message, "拦截器错误提示-------")
         const errorResponse = {
-            data: {
-                error: message,
-            }, // 获取全部的错误信息
+            data: message, // 获取全部的错误信息
             message: "请求失败",
-            code: 1, // 自定义code
+            code: exception.getStatus(), // 自定义code
             url: request.originalUrl, // 错误的url地址
         }
         const status =

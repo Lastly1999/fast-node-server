@@ -5,6 +5,9 @@ import {
     ManyToMany,
     CreateDateColumn,
     UpdateDateColumn,
+    OneToMany,
+    BaseEntity,
+    JoinColumn,
 } from "typeorm"
 import { Role } from "../role/role.entity"
 
@@ -12,7 +15,7 @@ import { Role } from "../role/role.entity"
  * 用户表
  */
 @Entity("sys_users")
-export class User {
+export class User extends BaseEntity {
     @PrimaryGeneratedColumn({ comment: "用户id" })
     id: number
 
@@ -37,6 +40,9 @@ export class User {
     @UpdateDateColumn({ name: "update_at" })
     updateAt: Date
 
-    @ManyToMany(() => Role, (role) => role.users)
+    @ManyToMany((type) => Role, (role) => role.users)
+    @JoinColumn({
+        referencedColumnName: "role_id",
+    })
     roles: Role[]
 }

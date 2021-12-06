@@ -1,8 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common"
-import { Repository } from "typeorm"
+import { EntityManager, Repository } from "typeorm"
 import { InjectRepository } from "@nestjs/typeorm"
 import { User } from "./user.entity"
 import { CreateUserDto } from "./dto/create-user.dto"
+import { Role } from "../role/role.entity"
 
 @Injectable()
 export class UserService {
@@ -14,14 +15,11 @@ export class UserService {
     /**
      * 创建用户
      * @param createUserDto
+     * @param manage
      */
-    async createUser(createUserDto: CreateUserDto): Promise<User> {
-        const user = await this.userRepository.create(createUserDto)
-        return await this.userRepository.save(user).catch(() => {
-            throw new HttpException(
-                "新增用户失败",
-                HttpStatus.INTERNAL_SERVER_ERROR,
-            )
-        })
+    async createUser(createUserDto: CreateUserDto, manage: EntityManager) {
+        const userEntity = new User()
+        await this.userRepository.create(userEntity)
+        return "创建成功"
     }
 }

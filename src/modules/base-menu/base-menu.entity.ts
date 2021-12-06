@@ -31,6 +31,6 @@ export class BaseMenu {
     @UpdateDateColumn({ name: "update_at" })
     updateAt: Date
 
-    @ManyToMany(() => Role, (Role) => Role.baseMenus)
-    roles: Role[]
+    // @ManyToMany(() => Role, (Role) => Role.baseMenus)
+    // roles: Role[]
 }
