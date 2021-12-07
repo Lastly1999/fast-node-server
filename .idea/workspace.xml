@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67374cb2-bfec-44e3-88ef-b5605bb69ca9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fast-node-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters/http-exception.filter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/http-exception.filter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/typeorm-log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/typeorm-log.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/filters/http-exception.filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/http-exception.filter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/role/role.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -94,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638805498741</updated>
       <workItem from="1638805500277" duration="5268000" />
+      <workItem from="1638885343888" duration="7535000" />
     </task>
     <servers />
   </component>

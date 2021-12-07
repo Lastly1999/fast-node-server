@@ -2,19 +2,16 @@ import { Logger as Nestlogger } from "@nestjs/common"
 import { Logger, QueryRunner } from "typeorm"
 
 export class MyCustomLogger implements Logger {
-    private readonly logger = new Nestlogger()
-
-    // 实现logger类的所有方法
     log(
         level: "log" | "info" | "warn",
         message: any,
         queryRunner?: QueryRunner,
     ): any {
-        this.logger.log(String(message).replace(/[\r\n]/g, ""))
+        Nestlogger.log(message, "TypeORMLog")
     }
 
     logMigration(message: string, queryRunner?: QueryRunner): any {
-        this.logger.log(`TypeOrm :${message.replace(/[\r\n]/g, "")}`)
+        Nestlogger.log("TypeORMMigration", message)
     }
 
     logQuery(
@@ -22,7 +19,13 @@ export class MyCustomLogger implements Logger {
         parameters?: any[],
         queryRunner?: QueryRunner,
     ): any {
-        this.logger.log(`TypeOrm :${query.replace(/[\r\n]/g, "")}`)
+        Nestlogger.log(
+            query
+                .toString()
+                .replace(/\ +/g, "")
+                .replace(/[\r\n]/g, " "),
+            "TypeORMLog",
+        )
     }
 
     logQueryError(
@@ -31,7 +34,7 @@ export class MyCustomLogger implements Logger {
         parameters?: any[],
         queryRunner?: QueryRunner,
     ): any {
-        this.logger.error(parameters, error)
+        Nestlogger.error(`${error}`, "TypeORMQueryError")
     }
 
     logQuerySlow(
@@ -40,10 +43,10 @@ export class MyCustomLogger implements Logger {
         parameters?: any[],
         queryRunner?: QueryRunner,
     ): any {
-        this.logger.error(time, query)
+        Nestlogger.warn(`${query};Time:${time}`, "TypeORMQuerySlow")
     }
 
     logSchemaBuild(message: string, queryRunner?: QueryRunner): any {
-        this.logger.error(message, queryRunner)
+        Nestlogger.warn(message, "TypeORMSchemaBuild")
     }
 }

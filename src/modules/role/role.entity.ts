@@ -13,14 +13,14 @@ import {
 import { User } from "../user/user.entity"
 
 @Entity("sys_roles")
-export class Role extends BaseEntity {
+export class Role {
     @PrimaryGeneratedColumn({ name: "role_id", comment: "角色id" })
-    roleId
+    roleId: number
 
     @Column({ name: "role_name", comment: "角色名称" })
     roleName?: string
 
-    @Column({ comment: "角色别名" })
+    @Column({ comment: "角色别名", nullable: true })
     describe?: string
 
     @CreateDateColumn({ name: "create_at" })
@@ -29,9 +29,10 @@ export class Role extends BaseEntity {
     @UpdateDateColumn({ name: "update_at" })
     updateAt?: Date
 
-    @ManyToMany((type) => User, (user) => user.roles)
+    @ManyToMany(() => User, (user) => user.roles)
     @JoinColumn({
-        referencedColumnName: "user_id",
+        name: "user_id",
+        referencedColumnName: "id",
     })
-    users: User[]
+    users?: User[]
 }

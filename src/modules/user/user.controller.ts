@@ -8,11 +8,7 @@ export class UserController {
     constructor(private readonly userService: UserService) {}
 
     @Post("user")
-    @Transaction()
-    createUser(
-        @Body() createUserDto: CreateUserDto,
-        @TransactionManager() manage: EntityManager,
-    ) {
-        return this.userService.createUser(createUserDto, manage)
+    createUser(@Body() createUserDto: CreateUserDto) {
+        return this.userService.createUser(createUserDto)
     }
 }
