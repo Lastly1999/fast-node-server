@@ -1,9 +1,11 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common"
-import { Connection } from "typeorm"
+import { EntityManager, Repository } from "typeorm"
 import { InjectRepository } from "@nestjs/typeorm"
 import { User } from "./user.entity"
 import { CreateUserDto } from "./dto/create-user.dto"
+import { Role } from "../role/role.entity"
 import { UserRepository } from "./user.repository"
+import { UpdateUserDto } from "./dto/update-user.dto"
 
 @Injectable()
 export class UserService {
@@ -15,7 +17,6 @@ export class UserService {
     /**
      * 创建用户
      * @param createUserDto
-     * @param manage
      */
     async createUser(createUserDto: CreateUserDto) {
         await this.userRepository
@@ -27,5 +28,17 @@ export class UserService {
                 )
             })
         return "创建成功"
+    }
+
+    /**
+     * 更新用户信息
+     * @param updateUserDto
+     */
+    async updateUser(updateUserDto: UpdateUserDto) {
+        const user = new User()
+        user.id = updateUserDto.id
+        user.userName = updateUserDto.userName
+        user.nikeName = updateUserDto.nikeName
+        await this.userRepository.update(user, updateUserDto)
     }
 }

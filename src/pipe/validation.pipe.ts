@@ -2,7 +2,6 @@ import {
     ArgumentMetadata,
     BadRequestException,
     Injectable,
-    Logger,
     PipeTransform,
 } from "@nestjs/common"
 import { plainToInstance } from "class-transformer"

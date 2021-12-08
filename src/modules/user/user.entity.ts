@@ -11,9 +11,6 @@ import {
 } from "typeorm"
 import { Role } from "../role/role.entity"
 
-/**
- * 用户表
- */
 @Entity("sys_users")
 export class User {
     @PrimaryGeneratedColumn({ comment: "用户id" })

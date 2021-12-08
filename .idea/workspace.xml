@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67374cb2-bfec-44e3-88ef-b5605bb69ca9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/typeorm-log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/typeorm-log.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters/http-exception.filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/http-exception.filter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/role/role.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/role/role.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/role/role.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/role/role.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/user.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pipe/validation.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipe/validation.pipe.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +62,24 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\project\fast-node-server\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="ts.external.directory.path" value="D:\project\fast-node-server\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="D:\privateProject\fast-node-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start:debug">
+    <configuration name="RoleService" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/modules/role/role.service.spec.ts" />
+      <test-names>
+        <test-name value="RoleService" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="ValidationPipe" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -75,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.RoleService" />
         <item itemvalue="Jest.ValidationPipe" />
       </list>
     </recent_temporary>
@@ -89,6 +110,7 @@
       <updated>1638805498741</updated>
       <workItem from="1638805500277" duration="5268000" />
       <workItem from="1638885343888" duration="7535000" />
+      <workItem from="1638931403505" duration="9900000" />
     </task>
     <servers />
   </component>

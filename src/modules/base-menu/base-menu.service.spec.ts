@@ -1,18 +1,18 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { BaseMenuService } from './base-menu.service';
+import { Test, TestingModule } from "@nestjs/testing"
+import { BaseMenuService } from "./base-menu.service"
 
-describe('BaseMenuService', () => {
-  let service: BaseMenuService;
+describe("BaseMenuService", () => {
+    let service: BaseMenuService
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [BaseMenuService],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            providers: [BaseMenuService],
+        }).compile()
 
-    service = module.get<BaseMenuService>(BaseMenuService);
-  });
+        service = module.get<BaseMenuService>(BaseMenuService)
+    })
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
-  });
-});
+    it("should be defined", () => {
+        expect(service).toBeDefined()
+    })
+})
