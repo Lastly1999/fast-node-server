@@ -7,7 +7,6 @@ import {
     UpdateDateColumn,
     BaseEntity,
     JoinTable,
-    JoinColumn,
 } from "typeorm"
 import { Role } from "../role/role.entity"
 

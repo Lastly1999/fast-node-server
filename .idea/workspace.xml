@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67374cb2-bfec-44e3-88ef-b5605bb69ca9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_12_8_9_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_12_8_9_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interceptor/transform.interceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/base-menu/base-menu.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/base-menu/base-menu.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/role/role.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/role/role.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/role/role.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/role/role.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/role/role.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/dto/create-user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/dto/update-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/dto/update-user.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pipe/validation.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pipe/validation.pipe.ts" afterDir="false" />
@@ -56,15 +51,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\project\fast-node-server\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="D:\privateProject\fast-node-server\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="E:\project\fast-node-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\fast-node-server\src\modules" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.start:debug">
     <configuration name="RoleService" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -111,11 +113,25 @@
       <workItem from="1638805500277" duration="5268000" />
       <workItem from="1638885343888" duration="7535000" />
       <workItem from="1638931403505" duration="9900000" />
+      <workItem from="1638974231877" duration="2369000" />
+      <workItem from="1638983831349" duration="532000" />
+      <workItem from="1639059575693" duration="8118000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
