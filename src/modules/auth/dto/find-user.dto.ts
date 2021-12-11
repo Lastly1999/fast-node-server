@@ -6,4 +6,10 @@ export class FindUserDto {
 
     @IsNotEmpty({ message: "密码不能为空" })
     readonly passWord: string
+
+    @IsNotEmpty({ message: "验证码id不能为空" })
+    readonly mathId: string
+
+    @IsNotEmpty({ message: "验证码不能为空" })
+    readonly mathText: string
 }

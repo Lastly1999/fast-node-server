@@ -7,8 +7,12 @@ import {
     UpdateDateColumn,
     BaseEntity,
     JoinTable,
+    OneToMany,
+    ManyToOne,
+    JoinColumn,
 } from "typeorm"
 import { Role } from "../role/role.entity"
+import { Department } from "../department/department.entity"
 
 @Entity("sys_users")
 export class User {
@@ -47,4 +51,8 @@ export class User {
         },
     })
     roles?: Role[]
+
+    @ManyToOne(() => Department, (dep) => dep.users)
+    @JoinColumn({ name: "dep_id" })
+    dep: Department
 }

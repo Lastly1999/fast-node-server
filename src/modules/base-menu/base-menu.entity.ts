@@ -2,9 +2,12 @@ import {
     Column,
     CreateDateColumn,
     Entity,
+    JoinTable,
+    ManyToMany,
     PrimaryGeneratedColumn,
     UpdateDateColumn,
 } from "typeorm"
+import { Role } from "../role/role.entity"
 
 @Entity("sys_base_menu")
 export class BaseMenu {
@@ -29,6 +32,15 @@ export class BaseMenu {
     @UpdateDateColumn({ name: "update_at" })
     updateAt: Date
 
-    // @ManyToMany(() => Role, (Role) => Role.baseMenus)
-    // roles: Role[]
+    @ManyToMany(() => Role, (Role) => Role.baseMenus)
+    @JoinTable({
+        name: "sys_basemenu_roles",
+        joinColumn: {
+            name: "menu_id",
+        },
+        inverseJoinColumn: {
+            name: "role_id",
+        },
+    })
+    roles: Role[]
 }

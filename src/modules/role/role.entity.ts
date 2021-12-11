@@ -1,5 +1,4 @@
 import {
-    BaseEntity,
     Column,
     CreateDateColumn,
     Entity,
@@ -9,6 +8,7 @@ import {
     UpdateDateColumn,
 } from "typeorm"
 import { User } from "../user/user.entity"
+import { BaseMenu } from "../base-menu/base-menu.entity"
 
 @Entity("sys_roles")
 export class Role {
@@ -33,4 +33,11 @@ export class Role {
         referencedColumnName: "id",
     })
     users?: User[]
+
+    @ManyToMany(() => BaseMenu, (baseMenu) => baseMenu.roles)
+    @JoinColumn({
+        name: "menu_id",
+        referencedColumnName: "id",
+    })
+    baseMenus?: BaseMenu[]
 }
