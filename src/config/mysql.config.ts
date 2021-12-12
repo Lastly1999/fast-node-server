@@ -1,5 +1,5 @@
-import { TypeOrmModuleOptions } from "@nestjs/typeorm"
 import { MyCustomLogger } from "./typeorm-log"
+import { TypeOrmModuleAsyncOptions } from "@nestjs/typeorm"
 
 export default {
     type: "mysql",
@@ -12,4 +12,4 @@ export default {
     synchronize: true,
     autoLoadEntities: true,
     logger: new MyCustomLogger(),
-} as TypeOrmModuleOptions
+} as TypeOrmModuleAsyncOptions

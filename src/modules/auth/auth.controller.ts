@@ -5,10 +5,7 @@ import { ToolsService } from "../tools/tools.service"
 
 @Controller("auth")
 export class AuthController {
-    constructor(
-        private readonly authService: AuthService,
-        private readonly toolsService: ToolsService,
-    ) {}
+    constructor(private readonly authService: AuthService) {}
 
     @Post("/login")
     async authLogin(@Body() findUserDto: FindUserDto) {
@@ -17,7 +14,7 @@ export class AuthController {
 
     @Get("/code")
     async authImgCode() {
-        return this.toolsService.generateSvgCode()
+        return this.authService.generateUserSvgCode()
     }
 
     @Get("/menu")

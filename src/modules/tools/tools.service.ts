@@ -8,13 +8,14 @@ export class ToolsService {
 
     /**
      * 生成图形验证码
-     * @param size
+     * @param keyName 缓存的key前缀
+     * @param size 验证码长度
+     * @param ttl 过期时间
      */
-    async generateSvgCode(size = 4) {
+    async generateSvgCode(keyName: string, size = 4, ttl: number) {
         const cap = svgCaptcha.create()
         const mathId = Number(Math.random() + Date.now()).toFixed(0)
-        const keyName = "capId:"
-        await this.redisCacheService.set(keyName + mathId, cap.text, 1000 * 60)
+        await this.redisCacheService.set(keyName + mathId, cap.text, ttl)
         return {
             cap: cap.data,
             mathId,
@@ -23,11 +24,11 @@ export class ToolsService {
 
     /**
      * 验证图形验证码
-     * @param mathId
-     * @param mathText
+     * @param keyPrefix 缓存的key前缀 -redis
+     * @param mathId 验证码缓存id
+     * @param mathText 验证码内容
      */
-    async verifySvgCode(mathId: string, mathText: string) {
-        const keyPrefix = "capId:"
+    async verifySvgCode(keyPrefix: string, mathId: string, mathText: string) {
         const keyName = keyPrefix + mathId
         const result = await this.redisCacheService.get(keyName)
         if (!result || result !== mathText) {

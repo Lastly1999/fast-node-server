@@ -13,12 +13,16 @@ export class AuthService {
         private readonly toolsService: ToolsService,
     ) {}
 
+    //  验证码缓存前缀
+    private readonly keyPrefix: string = "mathId"
+
     /**
      * 查找用户
      * @param findUserDto
      */
     async authLogin(findUserDto: FindUserDto) {
         const verifyResult = await this.toolsService.verifySvgCode(
+            this.keyPrefix,
             findUserDto.mathId,
             findUserDto.mathText,
         )
@@ -43,5 +47,18 @@ export class AuthService {
         return {
             info: result,
         }
+    }
+
+    /**
+     * 生成登录鉴权图形验证码
+     */
+    async generateUserSvgCode() {
+        const timeOut = 1000 * 60 // 过期时间
+        const codeSize = 4 // 图形验证码长度
+        return this.toolsService.generateSvgCode(
+            this.keyPrefix,
+            codeSize,
+            timeOut,
+        )
     }
 }

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67374cb2-bfec-44e3-88ef-b5605bb69ca9" name="Changes" comment="新增部门表实体，完善登录验证码逻辑">
+    <list default="true" id="67374cb2-bfec-44e3-88ef-b5605bb69ca9" name="Changes" comment="忽略.idea,.run文件">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/mysql.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mysql.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/typeorm-log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/typeorm-log.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tools/tools.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tools/tools.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nestjs-microservices-example" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -55,7 +63,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\project\fast-node-server\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="E:\project\fast-node-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -116,7 +124,9 @@
       <workItem from="1639232028992" duration="3882000" />
       <workItem from="1639236207466" duration="1732000" />
       <workItem from="1639239474776" duration="1862000" />
-      <workItem from="1639241391487" duration="1655000" />
+      <workItem from="1639241391487" duration="1751000" />
+      <workItem from="1639290456698" duration="2701000" />
+      <workItem from="1639292164311" duration="9002000" />
     </task>
     <task id="LOCAL-00001" summary="上传模块">
       <created>1639068545121</created>
@@ -132,11 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639242986686</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="忽略.idea,.run文件">
+      <created>1639243111068</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639243111068</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -152,7 +172,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传模块" />
     <MESSAGE value="新增部门表实体，完善登录验证码逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增部门表实体，完善登录验证码逻辑" />
+    <MESSAGE value="忽略.idea,.run文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略.idea,.run文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
