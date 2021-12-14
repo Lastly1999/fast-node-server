@@ -1,12 +1,4 @@
-import {
-    Column,
-    CreateDateColumn,
-    Entity,
-    JoinTable,
-    ManyToMany,
-    PrimaryGeneratedColumn,
-    UpdateDateColumn,
-} from "typeorm"
+import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 import { Role } from "../role/role.entity"
 
 @Entity("sys_base_menu")
