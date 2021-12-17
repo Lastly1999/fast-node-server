@@ -8,9 +8,9 @@ import { UploadModule } from "./modules/upload/upload.module"
 import { DepartmentModule } from "./modules/department/department.module"
 import { ToolsModule } from "./modules/tools/tools.module"
 import { RedisCacheModule } from "./modules/redis-cache/redis-cache.module"
-import mysqlConfig from "./config/mysql.config"
+import mysqlConfig from "./common/config/mysql.config"
 import { ConfigModule } from "@nestjs/config"
-import configuration from "./config/configuration"
+import configuration from "./common/config/configuration"
 
 @Module({
     imports: [

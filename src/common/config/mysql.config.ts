@@ -3,10 +3,10 @@ import { TypeOrmModuleAsyncOptions } from "@nestjs/typeorm"
 
 export default {
     type: "mysql",
-    host: "localhost",
+    host: "rm-wz94k0l69605b622nwo.mysql.rds.aliyuncs.com",
     port: 3306,
     username: "root",
-    password: "1234",
+    password: "Chen1027",
     database: "fnv",
     entities: ["dist/**/*.entity{.ts,.js}"],
     synchronize: true,

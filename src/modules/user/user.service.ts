@@ -9,7 +9,7 @@ import { UpdateUserDto } from "./dto/update-user.dto"
 export class UserService {
     constructor(
         @InjectRepository(UserRepository)
-        private readonly userRepository: UserRepository,
+        private readonly userRepository: UserRepository
     ) {}
 
     /**
@@ -17,14 +17,9 @@ export class UserService {
      * @param createUserDto
      */
     async createUser(createUserDto: CreateUserDto) {
-        await this.userRepository
-            .createUserInsertRoleIds(createUserDto)
-            .catch(() => {
-                throw new HttpException(
-                    "创建失败",
-                    HttpStatus.INTERNAL_SERVER_ERROR,
-                )
-            })
+        await this.userRepository.createUserInsertRoleIds(createUserDto).catch(() => {
+            throw new HttpException("创建失败", HttpStatus.INTERNAL_SERVER_ERROR)
+        })
         return "创建成功"
     }
 

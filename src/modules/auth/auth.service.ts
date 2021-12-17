@@ -20,7 +20,7 @@ export class AuthService {
      * 查找用户
      * @param findUserDto
      */
-    public async authLogin(findUserDto: FindUserDto) {
+    async authLogin(findUserDto: FindUserDto) {
         const verifyResult = await this.toolsService.verifySvgCode(this.keyPrefix, findUserDto.mathId, findUserDto.mathText)
         if (!verifyResult) throw new HttpException("验证码错误，请重试", HttpStatus.INTERNAL_SERVER_ERROR)
         const result = await this.userRepository.findOne({
@@ -35,8 +35,9 @@ export class AuthService {
 
     /**
      * 生成登录鉴权图形验证码
+     * @return Promise<{cap: string, mathId: string}>
      */
-    public async generateUserSvgCode() {
+    async generateUserSvgCode() {
         const timeOut = 1000 * 60 // 过期时间
         const codeSize = 4 // 图形验证码长度
         return this.toolsService.generateSvgCode(this.keyPrefix, codeSize, timeOut)

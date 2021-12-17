@@ -7,31 +7,31 @@ export class AuthController {
     constructor(private readonly authService: AuthService) {}
 
     @Post("/login")
-    public async authLogin(@Body() findUserDto: FindUserDto) {
+    async authLogin(@Body() findUserDto: FindUserDto) {
         return await this.authService.authLogin(findUserDto)
     }
 
     @Get("/code")
-    public async authImgCode() {
+    async authImgCode() {
         return this.authService.generateUserSvgCode()
     }
 
     @Get("/menu")
-    public async getSystemAuthMenu() {
+    async getSystemAuthMenu() {
         return "auth_menu"
     }
 
     @Get("/menuids")
-    public async getSystemAuthMenuIds() {
+    async getSystemAuthMenuIds() {
         return "ids"
     }
     @Patch("/menu")
-    public async updateRoleMenus() {
+    async updateRoleMenus() {
         return "update"
     }
 
     @Patch("/user")
-    public async updateUserRole() {
+    async updateUserRole() {
         return "update"
     }
 }

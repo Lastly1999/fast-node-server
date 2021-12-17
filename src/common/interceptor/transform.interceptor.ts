@@ -1,10 +1,4 @@
-import {
-    CallHandler,
-    ExecutionContext,
-    Injectable,
-    Logger,
-    NestInterceptor,
-} from "@nestjs/common"
+import { CallHandler, ExecutionContext, Injectable, Logger, NestInterceptor } from "@nestjs/common"
 import { Observable } from "rxjs"
 import { map } from "rxjs/operators"
 
@@ -16,7 +10,7 @@ export class TransformInterceptor implements NestInterceptor {
                 const result = { code: 200, data, message: "request:success" }
                 Logger.log(JSON.stringify(result), "-------响应正常拦截-------")
                 return result
-            }),
+            })
         )
     }
 }
