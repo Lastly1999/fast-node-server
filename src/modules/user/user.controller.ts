@@ -1,8 +1,8 @@
 import { Body, Controller, Patch, Post } from "@nestjs/common"
-import { CreateUserDto } from "./dto/create-user.dto"
+import { CreateUserDto } from "./dtos/create-user.dto"
 import { UserService } from "./user.service"
 import { Transaction } from "typeorm"
-import { UpdateUserDto } from "./dto/update-user.dto"
+import { UpdateUserDto } from "./dtos/update-user.dto"
 
 @Controller("user")
 export class UserController {

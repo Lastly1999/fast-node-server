@@ -12,6 +12,7 @@ export class RoleService {
 
     /**
      * 查询全部系统角色
+     * @param getRoleDto
      */
     async findAllSysRoles(getRoleDto: GetRoleDto) {
         try {
@@ -23,6 +24,7 @@ export class RoleService {
 
     /**
      * 新增系统角色
+     * @param putRoleDto
      */
     async putSysRole(putRoleDto: PutRoleDto) {
         const role = new Role()
@@ -36,15 +38,31 @@ export class RoleService {
 
     /**
      * 修改系统角色信息
+     * @param updateRoleDto
      */
     async updateRole(updateRoleDto: UpdateRoleDto) {
         const isExist = await this.roleRepository.findRoleById(updateRoleDto.roleId)
         if (!isExist) throw new HttpException("角色信息不存在", HttpStatus.INTERNAL_SERVER_ERROR)
         try {
-            await this.roleRepository.updateRole(updateRoleDto.roleId, updateRoleDto)
+            await this.roleRepository.updateRole(isExist)
         } catch (e) {
             throw new HttpException("更新失败", HttpStatus.INTERNAL_SERVER_ERROR)
         }
         return "更新成功"
+    }
+
+    /**
+     * 删除角色信息
+     * @param id
+     */
+    async deleteRoleById(id: string) {
+        const isExist = await this.roleRepository.findRoleById(Number(id))
+        if (!isExist) throw new HttpException("角色不存在", HttpStatus.INTERNAL_SERVER_ERROR)
+        try {
+            await this.roleRepository.deleteRole(isExist)
+        } catch (e) {
+            throw new HttpException("删除失败", HttpStatus.INTERNAL_SERVER_ERROR)
+        }
+        return "删除成功"
     }
 }

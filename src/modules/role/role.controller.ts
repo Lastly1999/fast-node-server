@@ -1,4 +1,4 @@
-import { Body, Controller, Patch, Post, Put } from "@nestjs/common"
+import { Body, Controller, Delete, Param, Patch, Post, Put, Query } from "@nestjs/common"
 import { RoleService } from "./role.service"
 import { PutRoleDto } from "./dtos/put-role.dto"
 import { GetRoleDto } from "./dtos/get-role.dto"
@@ -9,17 +9,22 @@ export class RoleController {
     constructor(private readonly roleService: RoleService) {}
 
     @Post("role")
-    getRoles(@Body() getRoleDto: GetRoleDto) {
-        return this.roleService.findAllSysRoles(getRoleDto)
+    async getRoles(@Body() getRoleDto: GetRoleDto) {
+        return await this.roleService.findAllSysRoles(getRoleDto)
     }
 
     @Put("role")
-    AddRole(@Body() putRoleDto: PutRoleDto) {
-        return this.roleService.putSysRole(putRoleDto)
+    async addRole(@Body() putRoleDto: PutRoleDto) {
+        return await this.roleService.putSysRole(putRoleDto)
     }
 
     @Patch("role")
-    updateRole(@Body() updateRoleDto: UpdateRoleDto) {
-        return this.roleService.updateRole(updateRoleDto)
+    async updateRole(@Body() updateRoleDto: UpdateRoleDto) {
+        return await this.roleService.updateRole(updateRoleDto)
+    }
+
+    @Delete("role/:id")
+    async deleteRole(@Param("id") id: string) {
+        return await this.roleService.deleteRoleById(id)
     }
 }

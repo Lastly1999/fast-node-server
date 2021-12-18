@@ -4,7 +4,7 @@ import { RedisCacheService } from "../redis-cache/redis-cache.service"
 
 @Injectable()
 export class ToolsService {
-    constructor(private redisCacheService: RedisCacheService) {}
+    constructor(private readonly redisCacheService: RedisCacheService) {}
 
     /**
      * 生成图形验证码
@@ -16,10 +16,7 @@ export class ToolsService {
         const cap = svgCaptcha.create()
         const mathId = Number(Math.random() + Date.now()).toFixed(0)
         await this.redisCacheService.set(keyName + mathId, cap.text, ttl)
-        return {
-            cap: cap.data,
-            mathId,
-        }
+        return { cap: cap.data, mathId }
     }
 
     /**

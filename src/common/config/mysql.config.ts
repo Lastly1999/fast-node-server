@@ -8,7 +8,7 @@ export default {
     username: "root",
     password: "Chen1027",
     database: "fnv",
-    entities: ["dist/**/*.entity{.ts,.js}"],
+    entities: ["dist/**/**/**/*.entity{.ts,.js}", "dist/**/**/**/**/*.entity{.ts,.js}"],
     synchronize: true,
     autoLoadEntities: true,
     logger: new MyCustomLogger(),

@@ -5,19 +5,21 @@ import { Role } from "./role.entity"
 export class RoleRepository extends Repository<Role> {
     /**
      * 查询系统角色列表
+     * @param pageSize
+     * @param pageNo
+     * @param keyWords
      */
     findAllSysRole(pageSize = 10, pageNo = 1, keyWords?: string) {
         return this.manager.getRepository(Role).find({
             skip: pageNo,
             take: pageSize,
-            where: {
-                roleName: Like(`%${keyWords}%`),
-            },
+            where: { roleName: Like(`%${keyWords}%`) },
         })
     }
 
     /**
      * 新增系统角色
+     * @param role
      */
     async createSysRole(role: Role) {
         const user = await this.manager.getRepository(Role).create(role)
@@ -26,16 +28,26 @@ export class RoleRepository extends Repository<Role> {
 
     /**
      * 查询是否存在角色
+     * @param id
      */
     async findRoleById(id: number) {
-        return this.manager.getRepository(Role).find({ where: { roleId: id } })
+        return this.manager.getRepository(Role).findOne({ where: { roleId: id } })
     }
 
     /**
      * 更新角色
+     * @param id
+     * @param role
      */
-    async updateRole(id: number, role: Role) {
-        const beforeCache = await this.manager.getRepository(Role).update(id, role)
-        return this.manager.save(beforeCache)
+    async updateRole(role: Role) {
+        return await this.manager.getRepository(Role).save(role)
+    }
+
+    /**
+     * 删除角色
+     * @param role
+     */
+    async deleteRole(role: Role) {
+        return this.manager.getRepository(Role).remove(role)
     }
 }

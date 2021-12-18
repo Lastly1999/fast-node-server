@@ -11,6 +11,7 @@ import { RedisCacheModule } from "./modules/redis-cache/redis-cache.module"
 import mysqlConfig from "./common/config/mysql.config"
 import { ConfigModule } from "@nestjs/config"
 import configuration from "./common/config/configuration"
+import { SystemModule } from "./modules/system/system.module"
 
 @Module({
     imports: [
@@ -27,6 +28,7 @@ import configuration from "./common/config/configuration"
         UploadModule,
         DepartmentModule,
         ToolsModule,
+        SystemModule,
     ],
 })
 export class AppModule {}
