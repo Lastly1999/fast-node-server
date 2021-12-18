@@ -2,7 +2,7 @@ import { HttpException, HttpStatus, Inject, Injectable } from "@nestjs/common"
 import { Repository } from "typeorm"
 import { User } from "../user/user.entity"
 import { InjectRepository } from "@nestjs/typeorm"
-import { FindUserDto } from "./dto/find-user.dto"
+import { FindUserDto } from "./dtos/find-user.dto"
 import { ToolsService } from "../tools/tools.service"
 
 @Injectable()
@@ -13,7 +13,7 @@ export class AuthService {
         private readonly toolsService: ToolsService
     ) {}
 
-    //  验证码缓存前缀
+    //  验证码redis缓存前缀
     private readonly keyPrefix: string = "mathId"
 
     /**
