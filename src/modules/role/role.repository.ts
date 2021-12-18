@@ -23,4 +23,19 @@ export class RoleRepository extends Repository<Role> {
         const user = await this.manager.getRepository(Role).create(role)
         return this.manager.save(user)
     }
+
+    /**
+     * 查询是否存在角色
+     */
+    async findRoleById(id: number) {
+        return this.manager.getRepository(Role).find({ where: { roleId: id } })
+    }
+
+    /**
+     * 更新角色
+     */
+    async updateRole(id: number, role: Role) {
+        const beforeCache = await this.manager.getRepository(Role).update(id, role)
+        return this.manager.save(beforeCache)
+    }
 }
